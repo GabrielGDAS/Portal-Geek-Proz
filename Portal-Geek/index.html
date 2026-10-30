@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portal Geek da Turma</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            background-color: #f5f2fc;
+            color: #30213d;
+            padding: 30px;
+        }
+
+        header {
+            background: linear-gradient(120deg, #29143d, #6335a0);
+            color: white;
+            text-align: center;
+            padding: 45px 20px;
+            border-radius: 12px;
+        }
+
+        header h1 {
+            margin-bottom: 12px;
+        }
+
+        nav {
+            margin-top: 25px;
+        }
+
+        nav a {
+            display: inline-block;
+            background-color: white;
+            color: #39204d;
+            padding: 12px 25px;
+            margin: 5px;
+            text-decoration: none;
+            border-radius: 6px;
+            font-weight: bold;
+        }
+
+        nav a:hover {
+            background-color: #ff8b32;
+            color: white;
+        }
+
+        main {
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+            flex-wrap: wrap;
+            gap: 25px;
+            margin-top: 30px;
+        }
+
+        section {
+            background-color: white;
+            padding: 25px;
+            border-radius: 12px;
+            width: 400px;
+            box-shadow: 0 4px 15px #00000015;
+        }
+
+        h2 {
+            color: #503078;
+            margin-bottom: 15px;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 14px;
+        }
+
+        th {
+            background-color: #eee5fa;
+            color: #39204d;
+        }
+
+        th,td {
+            padding: 12px 8px;
+            text-align: left;
+            border-bottom: 1px solid #ddd;
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+        }
+
+        input, select {
+            padding: 12px;
+            border: 1px solid #ccc;
+            border-radius: 100%;
+        }
+
+        button {
+            background-color: #ff852e;
+            color: white;
+            padding: 13px;
+            border: none;
+            border-radius: 6px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #e66c17;
+        }
+
+        footer {
+            text-align: center;
+            margin-top: 30px;
+            color: #777;
+            font-size: 12px;
+        }
+
+        @media (max-width:600px) {
+            body {
+                padding: 15px;
+            }
+
+            section {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    
+    <header>
+        <h1>Portal Geek da Turma</h1>
+        <p>Nosso cantinho para compartilhas jogos, tecnologia e eventos!</p>
+
+        <nav>
+            <a href="#agenda">Ver agenda</a>
+        </nav>
+    </header>
+
+    <main>
+
+        <section id="agenda">
+            <h2>Agenda Geek</h2>
+            <p>Confira os encontros e atividades da nossa comunidade.</p>
+
+            <br>
+
+            <table>
+                <tr>
+                    <th>Dia</th>
+                    <th>Atividade</th>
+                    <th>Horário</th>
+                </tr>
+
+                <tr>
+                    <td>Segunda</td>
+                    <td>Quiz de Tecnologia</td>
+                    <td>18h</td>
+                </tr>
+
+                <tr>
+                    <td>Quarta</td>
+                    <td>Duelo de Games</td>
+                    <td>19h</td>
+                </tr>
+
+                <tr>
+                    <td>Sexta</td>
+                    <td>Maratona de Anime</td>
+                    <td>18h30</td>
+                </tr>
+            </table>
+        </section>
+
+        <section id="participar">
+            <h2>Entre para a turma!</h2>
+            <p>Preencha o formulário para simular sua inscrição.</p>
+
+            <br>
+
+            <form>
+                <label for="nome">Apelido</label>
+                <input
+                    type="text"
+                    id="nome"
+                    placeholder=" Seu nome geek"
+                    required
+                >
+
+                <label for="email">E-mail</label>
+                <input
+                    type="email"
+                    id="email"
+                    placeholder=" voce@exemplo.com"
+                    required
+                >
+
+                <label for="tema"> Seu tema preferido</label>
+                <select id="tema" required>
+                    <option value=""> Escolha um tema</option>
+                    <option>Games</option>
+                    <option>Animes</option>
+                    <option>Tecnologia</option>
+                    <option>Filmes e séries</option>
+                </select>
+
+                <button type="submit">Quero participar!</button>
+            </form>
+        </section>
+
+    </main>
+
+</body>
+</html>
